@@ -14,5 +14,5 @@ Calculation of wages for a certain of months. I take into account vacation days,
 * Thymeleaf
 ####
 ## To clone application
-* git clone git@github.com:MarkReinhardtx/Neoflex_calculator.git
+* git clone git@github.com:MarkReinhardtx/neoflex-calculator.git
 * localhost:2000/calculacte

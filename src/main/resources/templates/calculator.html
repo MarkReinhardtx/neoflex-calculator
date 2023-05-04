@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>calculator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body bgcolor="#6394b9">
+
+<h1>Расчёт заработной платы:</h1>
+<form action="#" th:action="@{/calculacte}" th:object="${operationModel}" method="POST">
+    <div>
+        <h3>Введите колиство рабочих месяцев</h3>
+        <input type="text" th:field="*{workMonth}"/>
+    </div>
+    <div>
+         <h3>Введите вашу зарплату за месяц</h3>
+        <input type="text" th:field="*{salaryInMonth}"/>
+    </div>
+    <div>
+        <h3>Введите вашу премию за месяц</h3>
+        <input type="text" th:field="*{bonus}"/>
+    </div>
+    <div>
+        <h3>Введите число дней отпуска в год</h3>
+        <input type="text" th:field="*{daysVacation}"/>
+    </div>
+    <div>
+        <h3>Введите количество рабочих дней в неделю</h3>
+        <input type="text" th:field="*{workDaysInWeek}"/>
+    </div>
+    <div>
+        <h3>Введите количество сверхурочных дней в выходной</h3>
+        <input type="text" th:field="*{workInWeekends}"/>
+    </div>
+    <div>
+        <h3>Введите количество больничных дней в году</h3>
+        <input type="text" th:field="*{sickDays}"/>
+    </div>
+    <div>
+        <h3>Введите ваш опыт работы в годах
+            (необходимо для расчёта больничного)</h3>
+        <input type="text" th:field="*{workExperienceYears}"/>
+    </div>
+
+    <p>
+        <input type="submit" class="button" name="calculateSalary" value="Посчитать"/>
+        <!--        <input type="submit" class="button" name="clearSimple" value="C"/>-->
+    </p>
+
+
+    <h2><p th:text="'Ваша сумма: ' + ${result} + ' ' + 'рублей'"/></h2>
+</form>
+</body>
+</html>
